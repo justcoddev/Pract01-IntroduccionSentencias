@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+
+  <body onload="mostrar()">
+    <div class="container">
+      <div class="navbar">
+        <ul>
+          <li><a href="#001">Operaciones con 2 números</a></li>
+          <li><a href="#002">Número primo</a></li>
+          <li><a href="#003">Ingreso de persona</a></li>
+        </ul>
+      </div>
+      <hr />
+      <section id="001">
+        <label for="">Ingrese datos</label>
+        <form id="op1">
+          <div>
+            <div>
+              <label for="">Número 1</label>
+              <input id="op1_num1" />
+            </div>
+            <div>
+              <label for="">Número 2</label>
+              <input id="op1_num2" />
+            </div>
+            <div class="enviar">
+            </div>
+          </div>
+        </form>
+        <div>
+          <button class="boton" onclick="Operacion()">Enviar</button>
+        </div>
+        <div>
+          <label id="resultado" for="">Resultado</label>
+        </div>
+      </section>
+      <hr />
+      <section id="002">
+        <label for="">Ingrese datos</label>
+        <form id="forma2">
+          <p>
+            <label>Cedula</label>
+            <input type="text" id="cedula" placeholder="Escriba la cedula" />
+          </p>
+          <p>
+            <label>Nombres</label>
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder="Escribe tu nombre"
+            />
+          </p>
+          <p>
+            <label>Apellido</label>
+            <input
+              type="text"
+              id="apellido"
+              placeholder="Escriba el apellido"
+            />
+          </p>
+          <br />
+        </form>
+        <button class="close" onclick="agregar()">Enviar</button>
+        <div>
+          <table class="tabla">
+            <thead>
+              <tr>
+                <th>Cedula</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+              </tr>
+            </thead>
+            <tbody id="tabla"></tbody>
+          </table>
+        </div>
+      </section>
+      <hr />
+      <section id="003">
+        <p>sdf</p>
+      </section>
+    </div>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/Persona.js"></script>
+  </body>
+</html>
