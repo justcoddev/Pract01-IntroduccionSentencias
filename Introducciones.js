@@ -1,19 +1,26 @@
-// var n=5;
-// var nombre = "Oscarin";
+var n = 5;
+var nombre = "Oscarin";
 
-// function Operacion(a, b) {
-//     if (a > b) {
-//         var r = a + b;
-//     }
-//     if (b > a) {
-//         var r = b - a;
-//     }
-//     if (a == b) {
-//         var r = a * b;
-//     }
+function Operacion(a, b) {
+    if (a > b) {
+        var r = a + b;
+    }
+    if (b > a) {
+        var r = b - a;
+    }
+    if (a == b) {
+        var r = a * b;
+    }
 
-//     return r;
-// }
+    return r;
+}
+
+const formulario = document.forms['op1'];
+const num1 = document.forms['op1_num1'];
+const num2 = document.forms['op1_num2'];
+const btn = document.forms['op1_num2'];
+
+
 
 // let Estaciones=["Verano", "Invierno", "Otoño"];
 // //Agregar al final
@@ -24,7 +31,7 @@
 // // Estaciones.pop();
 // //Elimna el parametro
 // // Estaciones.shift("Calidos");
-// //Elimina a partir de la posicion 
+// //Elimina a partir de la posicion
 // Estaciones.splice(4);
 // document.write(Estaciones);
 
