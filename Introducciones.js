@@ -1,26 +1,58 @@
-var n = 5;
-var nombre = "Oscarin";
 
-function Operacion(a, b) {
-    if (a > b) {
-        var r = a + b;
-    }
-    if (b > a) {
-        var r = b - a;
-    }
-    if (a == b) {
-        var r = a * b;
-    }
 
-    return r;
+
+function Operacion() {
+  const forma = document.forms["op1"];
+  const va = forma["op1_num1"];
+  const vb = forma["op1_num2"];
+  let a = parseInt(va.value);
+  let b = parseInt(vb.value);
+
+  var r = 0;
+  if (a > b) {
+    r = a + b;
+  }
+  if (b > a) {
+    r = a - b;
+  }
+  if (a == b) {
+    r = a * b;
+  }
+  // console.log(r);
+  document.getElementById("resultado").innerHTML = r;
 }
 
-const formulario = document.forms['op1'];
-const num1 = document.forms['op1_num1'];
-const num2 = document.forms['op1_num2'];
-const btn = document.forms['op1_num2'];
+
+const personas = [{ cedula: "029029029029", nombre: "Alee", apellido: "Cont" }];
+function mostrar() {
+
+  let texto = "";
+
+  for (let persona of personas) {
 
 
+    texto += `<tr> <td> ${persona.cedula}  </td> <td> ${persona.nombre}  </td><td> ${persona.apellido}   
+     </tr> `;
+
+  }
+  document.getElementById('tabla').innerHTML = texto;
+
+}
+function agregar() {
+  const forma2 = document.forms['forma2'];
+  const cedula = forma2['cedula'];
+  const nombre = forma2['nombre'];
+  const apellido = forma2['apellido'];
+
+
+  const persona = new Persona(cedula.value, nombre.value, apellido.value);
+  personas.push(persona);
+  for (let persona of personas) {
+    console.log(persona);
+  }
+  mostrar();
+
+}
 
 // let Estaciones=["Verano", "Invierno", "Otoño"];
 // //Agregar al final
@@ -63,7 +95,6 @@ const btn = document.forms['op1_num2'];
 //     document.write(op.Cedula + " " + op.Nombre + "<br")
 // }
 
-
 // var id = parseInt(prompt("Ingrese Cedula"));
 // var name = ("Ingrese Nombre");
 // var lastname = prompt("Ingrese Apellido");
@@ -83,17 +114,6 @@ const btn = document.forms['op1_num2'];
 //     document.write(op.Cedula + " " + op.Nombre + "<br")
 // }
 
-
-
-
-
-
-
-
-
-
-
-
 // function Primo(x){
 //     let res;
 //     if(x<=1){
@@ -110,7 +130,6 @@ const btn = document.forms['op1_num2'];
 
 //     return res;
 // }
-
 
 // var x=parseInt(prompt("Ingrese valor uno"));
 // document.write(Primo(x));
